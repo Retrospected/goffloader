@@ -94,7 +94,7 @@ func resolveExternalAddress(symbolName string, outChannel chan<- interface{}) ui
 			case string([]rune{'B', 'e', 'a', 'c', 'o', 'n', 'F', 'o', 'r', 'm', 'a', 't', 'A', 'p', 'p', 'e', 'n', 'd'}):
 				fallthrough
 			case string([]rune{'B', 'e', 'a', 'c', 'o', 'n', 'F', 'o', 'r', 'm', 'a', 't', 'P', 'r', 'i', 'n', 't', 'f'}):
-				fallthrough
+				return windows.NewCallback(lighthouse.GetCoffPrintfForChannel(outChannel))
 			case string([]rune{'B', 'e', 'a', 'c', 'o', 'n', 'F', 'o', 'r', 'm', 'a', 't', 'T', 'o', 'S', 't', 'r', 'i', 'n', 'g'}):
 				fallthrough
 			case string([]rune{'B', 'e', 'a', 'c', 'o', 'n', 'U', 's', 'e', 'T', 'o', 'k', 'e', 'n'}):
